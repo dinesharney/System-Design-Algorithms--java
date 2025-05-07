@@ -1,16 +1,32 @@
 # System Design Algorithms - Java
 
-This repository contains Java implementations of various system design algorithms.
+This repository contains Java implementations of fundamental system design algorithms. These algorithms are building blocks for scalable, distributed, and high-performance backend systems.
 
-## 📌 Geohash Algorithm
+## 📦 Modules Included
 
-- Encode latitude and longitude into a Geohash string.
-- Decode a Geohash string back to latitude and longitude.
-- Determine the bounding box of a Geohash.
+### 1. 🔐 Geohash Encoder & Decoder
+- Encode geographic coordinates (latitude, longitude) into a short base32 geohash string.
+- Decode a geohash back into the approximate latitude/longitude.
+- Get the bounding box (min/max lat & lon) for any geohash.
 
-## 🛠️ How to Use
+📄 File: `GeoHash.java`
 
-1. Compile the Java files:
+### 2. 🎯 Consistent Hashing with Virtual Nodes
+- Evenly distributes keys across nodes in a distributed system.
+- Supports adding/removing nodes with minimal remapping of keys.
+- Includes support for virtual nodes to improve load balance.
 
-   ```bash
-   javac src/main/java/GeoHash.java
+📄 File: `ConsistentHash.java`
+
+---
+
+## 🛠️ How to Compile & Run
+
+### Requirements
+- JDK 8 or above
+- No external dependencies
+
+### Compile
+```bash
+javac GeoHash.java
+javac ConsistentHash.java
