@@ -7,29 +7,38 @@ This repository contains Java implementations of fundamental system design algor
 ## 📦 Modules Included
 
 ### 1. 🔐 Geohash Encoder & Decoder
-- Encode geographic coordinates (latitude, longitude) into a compact base32 geohash string.
-- Decode a geohash back to an approximate lat/lon.
-- Compute the bounding box for spatial indexing.
+- Encode geographic coordinates into a compact base32 geohash string.
+- Decode a geohash back to approximate coordinates.
+- Compute the bounding box for spatial queries.
 
 📄 File: `GeoHash.java`
 
 ---
 
 ### 2. 🎯 Consistent Hashing with Virtual Nodes
-- Distributes keys across nodes evenly with minimal rebalancing.
-- Handles node addition/removal with minimal disruption.
-- Supports virtual nodes for smoother distribution.
+- Distributes keys evenly across nodes with minimal reshuffling.
+- Adds support for virtual nodes for smoother key distribution.
+- Commonly used in distributed caches and sharded databases.
 
 📄 File: `ConsistentHash.java`
 
 ---
 
 ### 3. 🚰 Leaky Bucket Rate Limiter
-- Controls request rate over time using a fixed-size bucket.
-- Leaks requests at a constant rate (e.g., 2/sec).
-- Rejects requests if the bucket overflows.
+- Smooths out bursts of traffic by leaking requests at a fixed rate.
+- Rejects requests when the bucket is full.
+- Useful for network traffic shaping and burst control.
 
 📄 File: `LeakyBucket.java`
+
+---
+
+### 4. 🪣 Token Bucket Rate Limiter
+- Allows a burst of traffic up to a token capacity.
+- Replenishes tokens at a steady rate.
+- Ideal for API rate limiting with sustained throughput and burst tolerance.
+
+📄 File: `TokenBucket.java`
 
 ---
 
@@ -44,3 +53,4 @@ This repository contains Java implementations of fundamental system design algor
 javac GeoHash.java
 javac ConsistentHash.java
 javac LeakyBucket.java
+javac TokenBucket.java
