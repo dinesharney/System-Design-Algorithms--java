@@ -56,6 +56,16 @@ This repository contains Java implementations of fundamental system design algor
 
 ---
 
+### 6. 📁 Rsync (Incremental File Sync)
+
+* Computes rolling and strong checksums (MD5) to detect changes.
+* Syncs only the modified blocks instead of the entire file.
+* Demonstrates efficient file comparison and delta transfer.
+
+📄 File: `Rsync.java`
+
+---
+
 ## 🛠️ How to Compile & Run
 
 ### Requirements
@@ -71,6 +81,7 @@ javac ConsistentHash.java
 javac LeakyBucket.java
 javac TokenBucket.java
 javac Trie.java
+javac Rsync.java
 ```
 
 ### Run
@@ -81,6 +92,7 @@ java ConsistentHash
 java LeakyBucket
 java TokenBucket
 java Trie
+java Rsync
 ```
 
 ---
@@ -136,6 +148,15 @@ StartsWith 'he': true
 StartsWith 'ho': false
 ```
 
+### 🔹 Rsync
+
+```
+Comparing files...
+Modified Blocks:
+→ Block 2 differs
+→ Block 5 differs
+```
+
 ---
 
 ## 📚 Concepts Explained
@@ -145,6 +166,7 @@ StartsWith 'ho': false
 * **Leaky Bucket** – Smooths out traffic with fixed leak rate
 * **Token Bucket** – Allows bursts, enforces average request rate
 * **Trie** – Fast lookup of strings and prefixes
+* **Rsync** – Block-level file delta detection and sync
 
 ---
 
@@ -156,4 +178,3 @@ If you'd like to go beyond the code and understand the theory behind these algor
 by @dinesharney on Medium](https://medium.com/@dinesharney/key-system-design-algorithms-explained-simply-8faac0f57422)
 
 ---
-
