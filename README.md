@@ -46,6 +46,16 @@ This repository contains Java implementations of fundamental system design algor
 
 ---
 
+### 5. 📖 Trie (Prefix Tree)
+
+* Inserts and searches words efficiently using character-by-character traversal.
+* Supports prefix-based search and auto-complete features.
+* Ideal for dictionary storage, spell checkers, and predictive text systems.
+
+📄 File: `Trie.java`
+
+---
+
 ## 🛠️ How to Compile & Run
 
 ### Requirements
@@ -60,6 +70,7 @@ javac GeoHash.java
 javac ConsistentHash.java
 javac LeakyBucket.java
 javac TokenBucket.java
+javac Trie.java
 ```
 
 ### Run
@@ -69,6 +80,7 @@ java GeoHash
 java ConsistentHash
 java LeakyBucket
 java TokenBucket
+java Trie
 ```
 
 ---
@@ -115,6 +127,15 @@ Request 02: ACCEPTED
 Request 06: REJECTED
 ```
 
+### 🔮 Trie
+
+```
+Search 'hello': true
+Search 'helix': false
+StartsWith 'he': true
+StartsWith 'ho': false
+```
+
 ---
 
 ## 📚 Concepts Explained
@@ -123,6 +144,7 @@ Request 06: REJECTED
 * **Consistent Hashing** – Load balancing with minimal disruption
 * **Leaky Bucket** – Smooths out traffic with fixed leak rate
 * **Token Bucket** – Allows bursts, enforces average request rate
+* **Trie** – Fast lookup of strings and prefixes
 
 ---
 
@@ -132,3 +154,6 @@ If you'd like to go beyond the code and understand the theory behind these algor
 
 👉 [**Key System Design Algorithms Explained Simply**
 by @dinesharney on Medium](https://medium.com/@dinesharney/key-system-design-algorithms-explained-simply-8faac0f57422)
+
+---
+
